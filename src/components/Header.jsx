@@ -21,7 +21,7 @@ function Header() {
   ];
 
   return (
-    <header className="px-4 lg:px-20 h-[5vh] md:h-[8vh] lg:h-[10vh]  flex justify-between items-center bg-[#E84381] dark:bg-[#1B1D23] text-white">
+    <header className="px-4 lg:px-20 h-[5vh] md:h-[8vh] lg:h-[10vh] flex justify-between items-center bg-[#E84381] dark:bg-[#1B1D23] text-white">
       <h1 className="w-full text-xl font-bold dark:text-gray-300">
         Drop-Down-Dash
       </h1>
@@ -37,14 +37,13 @@ function Header() {
               {item.text}
             </li>
           ) : (
-            <li
-              key={item.id}
-              className="p-4 w-max cursor-pointer hover:text-black dark:hover:text-red-300"
-            >
+            <li key={item.id} className="p-4 w-max ">
               <NavLink
                 to={item.slug}
                 className={({ isActive }) =>
-                  isActive ? "text-black dark:text-red-300" : ""
+                  isActive
+                    ? "cursor-pointer text-black dark:text-red-300 hover:text-black dark:hover:text-red-300"
+                    : "cursor-pointer hover:text-black dark:hover:text-red-300"
                 }
               >
                 {item.text}
@@ -74,11 +73,7 @@ function Header() {
         {/* Mobile Navigation Items */}
         {navItems.map((item) =>
           item.text == "Restart" ? (
-            <li
-              key={item.id}
-              onClick={restart}
-              className="p-2 w-full hover:bg-slate-200 dark:hover:bg-gray-200 dark:text-white dark:hover:text-black duration-300 cursor-pointer"
-            >
+            <li key={item.id} onClick={restart} className="p-2 w-full">
               {item.text}
             </li>
           ) : (
