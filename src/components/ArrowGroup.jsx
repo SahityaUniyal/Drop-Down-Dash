@@ -1,28 +1,28 @@
 import Arrow from "./Arrow";
 import { FaArrowRight, FaArrowLeft, FaArrowDown } from "react-icons/fa";
-function ArrowGroup() {
+function ArrowGroup({ handleArrows }) {
   const handleClick = (arrow) => {
-    console.log(arrow);
+    handleArrows(arrow);
   };
   return (
     <div className="flex gap-1 justify-center">
       <Arrow
         onClick={() => {
-          handleClick("left");
+          handleClick("ArrowLeft");
         }}
       >
         <FaArrowLeft />
       </Arrow>
       <Arrow
         onClick={() => {
-          handleClick("down");
+          handleClick("ArrowDown");
         }}
       >
         <FaArrowDown />
       </Arrow>
       <Arrow
         onClick={() => {
-          handleClick("right");
+          handleClick("ArrowRight");
         }}
       >
         <FaArrowRight />

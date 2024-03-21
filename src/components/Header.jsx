@@ -3,16 +3,17 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { MdDarkMode } from "react-icons/md";
 import { CiLight } from "react-icons/ci";
 import { useTheme } from "../hooks/useTheme";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 function Header() {
   // nav handles mobile button status
   const [nav, setNav] = useState(false);
   const [theme, toggleTheme] = useTheme();
+  const navigate = useNavigate();
   const handleNav = () => {
     setNav(!nav);
   };
   const restart = () => {
-    console.log("restart");
+    navigate(0);
   };
   const navItems = [
     { id: 1, text: "Play Game", slug: "/" },

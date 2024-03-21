@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
-import { Home, Rules } from "./pages";
+import { Home, Rules, GameOver } from "./pages";
 import "./index.css";
 const router = createBrowserRouter([
   {
@@ -17,11 +17,13 @@ const router = createBrowserRouter([
         path: "/rules",
         element: <Rules />,
       },
+      {
+        path: "/game-over",
+        element: <GameOver />,
+      },
     ],
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+  <RouterProvider router={router} />
 );
