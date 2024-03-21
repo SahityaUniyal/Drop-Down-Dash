@@ -29,4 +29,4 @@
 
 # Demo
 
-![temp](https://github.com/SahityaUniyal/Drop-Down-Dash/public/demo.gif?raw=true)
+![temp](https://github.com/SahityaUniyal/Drop-Down-Dash/blob/main/public/demo.gif?raw=true)
